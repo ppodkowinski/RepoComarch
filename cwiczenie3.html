@@ -1,0 +1,66 @@
+	<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+<input type="button" id="prompt" value="Okienko Prompt" />  
+<script>
+
+function pimie(){
+	var imie = prompt('Podaj swoje imię:', '');
+    if (imie === "") {       
+		pimie();
+    } else {      
+		return imie;
+    }
+	console.log(imie);
+	
+}
+
+document.getElementById('prompt').onclick = function() {
+    pimie();
+	pnazwisko();
+	pwiek();
+}
+function pnazwisko(){
+var nazwisko = prompt('Podaj swoje nazwisko:', '');
+    if (nazwisko === "") {  
+		pnazwisko();	
+    } else {        
+		return nazwisko;
+    }
+	console.log(nazwisko);
+
+}
+function pwiek(){
+var wiek = prompt('Podaj swoje wiek:', '');
+    if (isNaN(wiek)) {  
+	pwiek();
+    } else {      
+		return wiek;
+    }
+	
+function _czlowiek(_imie, _nazwisko,_wiek){
+this.imie = _imie;
+this.nazwisko = _nazwisko;
+this.wiek = _wiek;
+this.przedstawSie = function(){
+console.log('mam na imie' +this.imie+,' moje nazwiko'+this.nazwisko+' moj wiek' +this.wiek+);
+};
+
+}
+
+
+
+
+
+}
+</script>
+  </body>
+</html>
+	
